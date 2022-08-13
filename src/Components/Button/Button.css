@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+
+    padding: 0.75em 0.75em;
+    border-radius: 0.5em;
+    border: none;
+    color: #fff;
+    background-color: #333;
+}
+.button:not(.button[disabled]) {
+    cursor: pointer;
+
+    transition: opacity .3s, background-color .3s;
+}
+.button[disabled] {
+    opacity: 0.5;
+}
+.button--default {
+    background-color: orangered;
+}
+.button--default:hover {
+    background-color: red;
+}
+.button--accent {
+    background-color: yellowgreen;
+}
+.button--accent:hover {
+    background-color: green;
+}

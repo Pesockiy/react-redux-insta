@@ -1,0 +1,121 @@
+.header {
+    padding: 20px;
+    background-color: orangered;
+}
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: brown;
+}
+.toggler {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: yellow;
+    border: 2px solid rgba(255, 255, 255, 0.185);
+    cursor: pointer;
+    box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.788);
+    transition: background-color .3s;
+}
+.toggler::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(37, 6, 95);
+    border-radius: 50%;
+    transition: margin-left .3s;
+}
+.toggler--active {
+    background-color: rgb(37, 6, 95);
+}
+.toggler--active::after {
+    margin-left: 50%;
+    background-color: yellow;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: brown;
+    border-radius: 50%;
+    aspect-ratio: 1/0.5;
+    padding: 30px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+.card:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.loader span {
+    width: 50%;
+    height: 50%;
+    animation: spin 1s both infinite linear;
+    border: 4px solid red;
+    border-bottom-color: transparent;
+    border-left-color: transparent  ;
+    border-radius: 50%;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+.todos-block {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 10px;
+    align-items: flex-start;
+}
+.todos-block a {
+    text-decoration: none;
+    color: black;
+}
+.poke {
+    transition: .3s ease-in-out color;
+}
+.poke {
+    color: transparent;
+    background-color:red;
+    background-clip: text;
+    fill: gray
+}
+.line-through {
+    text-decoration: line-through;
+}
